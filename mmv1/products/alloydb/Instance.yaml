@@ -200,6 +200,18 @@ properties:
       - 'AVAILABILITY_TYPE_UNSPECIFIED'
       - 'ZONAL'
       - 'REGIONAL'
+  - name: 'activationPolicy'
+    type: Enum
+    description: |
+      'Activation Policy for the instance.Required to START or STOP an instance.
+      ALWAYS - The instance is up and running.
+      NEVER - The instance is stopped. 
+      ACTIVATION_POLICY must be one of: ALWAYS, NEVER.'
+    default_from_api: true
+    enum_values:
+      - 'ACTIVATION_POLICY_UNSPECIFIED'
+      - 'ALWAYS'
+      - 'NEVER'
   - name: 'instanceType'
     type: Enum
     description: |
